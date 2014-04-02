@@ -29,6 +29,15 @@ test:
   password: Cl3an5hirt5!
   host: 192.168.226.155
 
+staging:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: dev
+  username: starchup
+  password: Cl3an5hirt5!
+  host: 192.168.226.147
+
 production:
   adapter: mysql2
   encoding: utf8
@@ -36,4 +45,4 @@ production:
   database: prod
   username: starchup
   password: Cl3an5hirt5!
-  host: 192.168.226.155
+  host: 192.168.226.147
