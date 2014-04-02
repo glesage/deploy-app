@@ -7,8 +7,7 @@ set :repo_url, 'git@github.com:glesage/deploy-app.git'
 set :deploy_via, :copy
 set :deploy_to, "/var/www"
 
-# set :format, :pretty
-# set :log_level, :debug
+set :log_level, :debug
 set :pty, true
 
 # set :linked_files, %w{config/database.yml}
@@ -22,7 +21,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-       execute :touch, release_path.join('tmp/restart.txt')
+       #execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
